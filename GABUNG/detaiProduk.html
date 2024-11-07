@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosmed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-[#F6F6F6] pt-14 pl-64">
+
+    <!-- SIDEBAR -->
+    <div class="fixed bg-gradient-to-b from-[#2B2A4C] to-[#131321] text-white h-full text-[20px] hidden md:flex items-center top-0 left-0">
+        <ul>
+            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10 cursor:pointer">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="my-3 py-1 bg-[#B31312] transition-all px-10">
+                <a href="#">Detail Produk</a>
+            </li>
+            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
+                <a href="#">Manajemen Konten</a>
+            </li>
+            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
+                <a href="#">Sosial Media</a>
+            </li>
+            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
+                <a href="#">Daftar Pesanan</a>
+            </li>
+            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
+                <a href="#">Daftar Kontak</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="flex justify-between px-10 py-2 bg-[#B31312] fixed w-full top-0 left-0 right-0">
+
+        <div class="flex">
+
+            <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center w-10 h-10 text-sm text-white rounded-md md:hidden block" aria-controls="navbar-hamburger" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <!-- LOGO -->
+            <img src="image/celebes-logo 1.png" alt="" class="w-[40px] h-[40px]">
+
+        </div>
+        <!-- ICON -->
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[40px] h-[40px]">
+            <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </nav>
+
+    <!-- BODY -->
+     <div class=" h-fit gap-4 grid p-10 align-right">
+
+        <div class="flex justify-between">
+            <div>
+
+            </div>
+            <button class="bg-[#493628] w-[42px] h-[42px] rounded-md shadow-xl align-right">
+                <img src="image/add-svgrepo-com.svg" alt="">
+            </button>
+        </div>
+
+        <!-- TABLE -->
+        <div class="w-full text-[#493628] mx-auto bg-white p-6 rounded-md shadow-lg text-left h-fit">
+            <table class="min-w-full bg-white">
+             <thead>
+               <!-- BARIDs -->
+              <tr>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Gambar
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Nama
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Teknologi
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Harga
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Tanggal
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Status
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628]">
+                Aksi
+               </th>
+              </tr>
+             </thead>
+       
+             <tbody>
+               <!-- KONTEN 1 -->
+              <tr class="border-b border-[#493628]">
+                <td class="py-2 px-4">
+                    <img alt="gambar 1" class="w-78 h-42 overflow-hidden" height="50" src="image/download.jpg" width="50"/>
+                   </td>
+                <td class="py-2 px-4">
+                tunju2.com
+               </td>
+               <td class="py-2 px-4">
+                wordpress
+               </td>
+               <td class="py-2 px-4">
+                100.000.000
+               </td>
+               <td class="py-2 px-4">
+                19/09/2019
+               </td>
+               <td class="py-2 px-4">
+                <span class="bg-green-200 text-green-800 py-1 px-3 rounded-sm text-xs ">
+                 Aktif
+                </span>
+               </td>
+               <td class="py-2 px-4">
+                <button id="toggleAlert" class="bg-red-500 text-white p-2 px-3 rounded-sm">
+                 <i class="fas fa-trash">
+                 </i>
+                </button>
+                <button class="bg-blue-500 text-white p-2 px-3 rounded-sm">
+                 <i class="fas fa-pen">
+                 </i>
+                </button>
+                <button id="toggleModal" class="bg-green-500 text-white p-2 px-3 rounded-sm ">
+                 <i class="fas fa-eye">
+                 </i>
+                </button>
+               </td>
+              </tr>
+             </tbody>
+             
+            </table>
+        </div>
+
+        <!-- COUNTER -->
+        <div class="flex justify-between items-center">
+            <div>
+
+            </div>
+            <div class="flex items-center border rounded-lg p-2 bg-white shadow-md">
+                <button class="bg-[#493628] text-white p-2 rounded-l" onclick="incrementCounter()">
+                    <i class="fas fa-chevron-left">
+                    </i>
+                   </button>
+             <span class="mx-2" id="counter">
+              1
+             </span>
+             <button class="bg-[#493628] text-white p-2 rounded-r" onclick="incrementCounter()">
+              <i class="fas fa-chevron-right">
+              </i>
+             </button>
+            </div>
+        </div>
+     </div>
+
+     <!-- PERPOPUPAN -->
+
+     <div id="popup-modal" class="hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50">
+        <div class="relative p-4 w-full max-w-md">
+            <div class="relative bg-white rounded-md shadow p-10">
+                <button id="closeModal" class="absolute top-3 right-2.5 text-gray-400 rounded-md text-sm w-8 h-8 flex justify-center items-center">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                
+                <div class="text-sm font-medium mt-2">
+                    <div>
+                        <p class="font-bold">Gambar</p>
+                        <img class="w-64" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="">
+                    </div>
+                    <div class="my-2">
+                        <p class="font-bold">Judul</p>
+                        <span class="font-medium">kucing.com</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Teknologi</p>
+                        <span class="font-medium">Wordpress</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Harga</p>
+                        <span class="font-medium">Rp100.000.000</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Tanggal</p>
+                        <span class="font-medium">19/09/24</span>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-1">Status</p>
+                        <span class="bg-green-200 text-green-800 py-1 px-3 rounded-sm text-xs ">
+                            Aktif
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-alert" class="hidden text-[#493628] fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50 text-center">
+        <div class="relative p-4 w-full max-w-md">
+            <div class="relative bg-white rounded-md shadow p-10">
+                <div class="border-4 w-fit p-6 rounded-full border-[#493628] mt-[-125px] bg-white mx-auto">
+                    <svg width="127" height="127" class="mx-auto justify-center" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M73.4 84.2149H53.598L45.6406 3.96875H81.3594L73.4 84.2149Z" fill="#493628"/>
+                        <path d="M63.498 123.031C71.8962 123.031 78.7043 116.238 78.7043 107.859C78.7043 99.479 71.8962 92.686 63.498 92.686C55.0998 92.686 48.2917 99.479 48.2917 107.859C48.2917 116.238 55.0998 123.031 63.498 123.031Z" fill="#493628"/>
+                    </svg>    
+                </div>
+                <h5 class="text-2xl font-semibold mt-2">Anda Yakin?</h5>
+                <p>Data ini akan terhapus selama-lamanya <br>perhatikan baik-baik data yang dipilih</p>
+                <div class="flex mt-3">
+                    <button id="closeAlert" class="w-full border-2 py-3 ml-2 text-[#493628] border-[#493628] font-semibold">Cek lagi</button>
+                    <button class="w-full border-2 bg-[#493628] text-white border-[#493628] font-semibold">Ya</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- SCRIPT -->
+     <script>
+        function incrementCounter() {
+            let counter = document.getElementById('counter');
+            counter.innerText = parseInt(counter.innerText) + 1;
+        }
+    
+        function decrementCounter() {
+            let counter = document.getElementById('counter');
+            if (parseInt(counter.innerText) > 0) {
+                counter.innerText = parseInt(counter.innerText) - 1;
+            }
+        }
+    
+        // Social Media Modal
+        const socialMediaModal = document.getElementById("popup-modal");
+        const socialToggleButton = document.getElementById("toggleModal");
+        const socialCloseButton = document.getElementById("closeModal");
+    
+        socialToggleButton.addEventListener("click", () => {
+            socialMediaModal.classList.remove("hidden");
+        });
+    
+        socialCloseButton.addEventListener("click", () => {
+            socialMediaModal.classList.add("hidden");
+        });
+    
+        socialMediaModal.addEventListener("click", (e) => {
+            if (e.target === socialMediaModal) {
+                socialMediaModal.classList.add("hidden");
+            }
+        });
+    
+        // Delete Alert Modal
+        const alertModal = document.getElementById("popup-alert");
+        const alertToggleButton = document.getElementById("toggleAlert");
+        const alertCloseButton = document.getElementById("closeAlert");
+    
+        alertToggleButton.addEventListener("click", () => {
+            alertModal.classList.remove("hidden");
+        });
+    
+        alertCloseButton.addEventListener("click", () => {
+            alertModal.classList.add("hidden");
+        });
+    
+        alertModal.addEventListener("click", (e) => {
+            if (e.target === alertModal) {
+                alertModal.classList.add("hidden");
+            }
+        });
+    </script>
+    
+</body>
+</html>
