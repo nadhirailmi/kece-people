@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sosmed</title>
+    <title>Manajemen Konten</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -20,10 +20,10 @@
             <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
                 <a href="#">Detail Produk</a>
             </li>
-            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
+            <li class="my-3 py-1 bg-[#B31312] transition-all px-10">
                 <a href="#">Manajemen Konten</a>
             </li>
-            <li class="my-3 py-1 bg-[#B31312] transition-all px-10">
+            <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
                 <a href="#">Sosial Media</a>
             </li>
             <li class="my-3 py-1 hover:bg-[#B31312] transition-all px-10">
@@ -72,50 +72,62 @@
         </div>
 
         <!-- TABLE -->
-        <div class="w-full text-[#493628] mx-auto bg-white p-6 rounded-md shadow-lg text-left h-fit">
-            <table class="min-w-full bg-white">
+        <div class="w-full mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex justify-end">
+             
+            </div>
+            <table class="min-w-full bg-white pe-5 text-left">
              <thead>
-               <!-- BARIDs -->
               <tr>
-               <th class="py-2 px-4 border-b border-[#493628]">
-                Platform
+               <th class="py-2 px-4 border-b border-[#493628] text-[#493628]">
+                Gambar
                </th>
-               <th class="py-2 px-4 border-b border-[#493628]">
-                Tautan
+               <th class="py-2 px-4 border-b border-[#493628] text-[#493628]">
+                Judul
                </th>
-               <th class="py-2 px-4 border-b border-[#493628]">
+               <th class="py-2 px-4 border-b border-[#493628] text-[#493628]">
+                Penulis
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628] text-[#493628]">
+                Tanggal
+               </th>
+               <th class="py-2 px-4 border-b border-[#493628] text-[#493628]">
                 Status
                </th>
-               <th class="py-2 px-4 border-b border-[#493628]">
+               <th class="py-2 px-4 border-b border-[#493628] text-[#493628]">
                 Aksi
                </th>
               </tr>
              </thead>
-       
              <tbody>
-               <!-- KONTEN 1 -->
               <tr class="border-b border-[#493628]">
                <td class="py-2 px-4">
-                Instagram
+                <img alt="gambar 1" class="w-78 h-42 overflow-hidden" height="50" src="image/download.jpg" width="50"/>
+               </td>
+               <td class="py-2 px-4 text-[#493628]">
+                 Lorem ipsum
+               </td>
+               <td class="py-2 px-4 text-[#493628]">
+                 Lorem ipsum
+               </td>
+               <td class="py-2 px-4 text-[#493628]">
+                 Lorem ipsum
                </td>
                <td class="py-2 px-4">
-                 https://www.instagram.com
-               </td>
-               <td class="py-2 px-4">
-                <span class="bg-green-200 text-green-800 py-1 px-3 rounded-sm text-xs ">
+                <span class="bg-green-200 text-green-800 py-1 px-3 rounded text-xs">
                  Aktif
                 </span>
                </td>
                <td class="py-2 px-4">
-                <button id="toggleAlert" class="bg-red-500 text-white p-2 px-3 rounded-sm">
+                <button id="toggleAlert" class="bg-red-500 text-white p-2 rounded">
                  <i class="fas fa-trash">
                  </i>
                 </button>
-                <button class="bg-blue-500 text-white p-2 px-3 rounded-sm">
+                <button class="bg-blue-500 text-white p-2 rounded">
                  <i class="fas fa-pen">
                  </i>
                 </button>
-                <button id="toggleModal" class="bg-green-500 text-white p-2 px-3 rounded-sm ">
+                <button id="toggleModal" class="bg-green-500 text-white p-2 rounded">
                  <i class="fas fa-eye">
                  </i>
                 </button>
@@ -123,7 +135,7 @@
               </tr>
              </tbody>
             </table>
-        </div>
+           </div>
 
         <!-- COUNTER -->
         <div class="flex justify-between items-center">
@@ -160,12 +172,20 @@
                 
                 <div class="text-sm font-medium mt-2">
                     <div>
-                        <p class="font-bold">Platform</p>
-                        <span class="font-medium">Instagram</span>
+                        <p class="font-bold">Gambar</p>
+                        <img alt="gambar 1" class="w-78 h-42 overflow-hidden" src="image/download.jpg"/>
+                    </div>
+                    <div>
+                        <p class="font-bold">Judul</p>
+                        <span class="font-medium">Lorem Ipsum</span>
                     </div>
                     <div class="my-2">
-                        <p class="font-bold">Tautan</p>
-                        <span class="font-medium">https://www.instagram.com</span>
+                        <p class="font-bold">Penulis</p>
+                        <span class="font-medium">Lorem Ipsum</span>
+                    </div>
+                    <div class="my-2">
+                        <p class="font-bold">Tanggal</p>
+                        <span class="font-medium">Lorem Ipsum</span>
                     </div>
                     <div>
                         <p class="font-bold mc-1">Status</p>
