@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+</head>
+<body>
+    
+<button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+    Toggle modal
+    </button>
+    
+    <div id="popup-modal" tabindex="-1" class="text-[#493628] hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full  h-[calc(100%-1rem)] max-h-full  text-center">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow p-10">
+
+                <div class="border-4 w-fit p-6 rounded-full border-[#493628] mt-[-125px] bg-white mx-auto">
+                    <svg width="127" height="127" class="mx-auto justify-center" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M73.4 84.2149H53.598L45.6406 3.96875H81.3594L73.4 84.2149Z" fill="#493628"/>
+                        <path d="M63.498 123.031C71.8962 123.031 78.7043 116.238 78.7043 107.859C78.7043 99.479 71.8962 92.686 63.498 92.686C55.0998 92.686 48.2917 99.479 48.2917 107.859C48.2917 116.238 55.0998 123.031 63.498 123.031Z" fill="#493628"/>
+                    </svg>    
+                </div>
+                <h5 class="text-2xl font-semibold mt-2">Anda Yakin?</h5>
+                <p>Data ini akan terhapus selama-lamanya <br>perhatikan baik-baik data  yang dipilih</p>
+                <div class="flex mt-3">
+                    <button data-dismiss-target="#popup-modal" class="w-full border-2 py-3 ml-2 text-[#493628] border-[#493628] font-semibold">Cek lagi</button>
+                    <button class="w-full border-2 bg-[#493628] text-white border-[#493628] font-semibold">Ya</button>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
