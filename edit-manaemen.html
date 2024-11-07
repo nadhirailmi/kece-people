@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <div class="w-full border-2 p-3 text-[#493628] max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-10">
+        <div class="flex w-full justify-content item-center">
+            <div class="w-72">
+                <p>Gambar</p>
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center">
+                        <div class="border-2 border-[#493628] p-12 px-24 rounded-md">
+                            <img src="image/kamera.svg" alt="">
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div> 
+                
+            </div>
+            <div class="w-full mx-2">
+            <div class="h-24 w-full"></div>
+                <div class="w-full ml-2">
+                    <p>Judul</p>
+                    <input type="text" class="w-full border-2 border-[#493628] rounded ">
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-3">
+            <p>Pembuat</p>
+            <input type="text" class="w-full border-2 border-[#493628] rounded">
+        </div>
+        <div class="mt-3">
+            <p>Tanggal</p>
+            <div class="relative">
+                <input datepicker id="default-datepicker" type="date" class=" border-2 border-[#493628] rounded">
+            </div>  
+        </div>
+        <div class="flex justify-between">
+            <div>
+                <p class="mt-4">Status</p>
+                <label class="inline-flex items-center cursor-pointer flex">
+                    <input type="checkbox" value="" class="sr-only peer" checked>
+                    <div class="relative w-16 h-9 bg-[#493628] rounded  dark:bg-white-500 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-[#493628] after:content-[''] after:absolute after:top-0.5 after:start-[1px] after:bg-white after:border-[#F6F6F6] after:border after:rounded after:h-8 after:w-8 after:transition-all dark:border-[#F6F6F6] peer-checked:bg-[#F6F6F6]"></div>
+                </label>
+    
+            </div>
+            <div class="mt-10">
+                <button class="bg-[#493628] text-white p-1 rounded-1 w-48 rounded shadow-lg">
+                    <h3>Simpan</h3>
+                </button>
+                <button class="bg-white text-red p-1 rounded-1 w-48 border-2 border-[#493628] ml-6 rounded shadow-lg">
+                    <h3>Buang</h3>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
